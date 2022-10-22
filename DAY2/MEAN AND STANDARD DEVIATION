@@ -1,0 +1,32 @@
+#include<iostream>
+#include <cmath>
+using namespace std;
+
+float calculateSD(float data[]);
+int main()
+{
+int a;
+   float data[10];
+    
+    cout<<"enter 10 elements";
+    for(a=0;a<10;++a)
+    {
+        cin >>data[a];
+    }
+    cout<<"standard deviation="<< calculateSD(data);
+    return 0;
+}
+
+float calculateSD(float data[])
+{
+float sum =0.0 , mean , standarddeviation =0.0;
+    int a;
+   for(a=0;a<10;++a)
+   {
+       sum += data[a];
+   }
+    {
+       standarddeviation += pow(data[a]-mean,2);
+    }
+    return sqrt(standarddeviation/10);
+}
