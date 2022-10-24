@@ -1,0 +1,17 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+using namespace std;
+int main()
+{
+    ofstream mywritefile("vaishali.txt");
+    mywritefile << " this is my first written file";
+    mywritefile.close();
+    string mytext;
+    ifstream myreadfile("vaishali.txt");
+    while(getline(myreadfile,mytext))
+    {
+        cout<< mytext;
+    }
+myreadfile.close();
+}
