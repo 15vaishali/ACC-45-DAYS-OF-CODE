@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class manager
+{
+    public:
+    int id;
+    string name;
+    float salary;
+    manager(int id , string name , float salary)
+    {
+        this-> id = id;
+        this-> name = name;
+        this-> salary = salary;
+    }
+    void disp()
+    {
+        cout<< id<<" "<< name <<" "<<salary<<endl;
+    }
+};
+int main()
+{
+    manager m1 = manager(11,"camin",90000);
+    manager m2 = manager(12,"candace",80000);
+    m1.disp();
+    m2.disp();
+    return 0;
+}
