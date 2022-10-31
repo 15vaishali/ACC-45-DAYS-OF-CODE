@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+class Student
+{
+	int id;
+	public:
+	void view(int x)
+	{
+		id=x;
+	}
+	Student(){} 
+	
+	Student(Student &t) 
+	{
+		id=t.id;
+	}
+	void display()
+	{
+		cout<<endl<<"ID="<<id;
+	}
+};
+int main()
+{
+	Student obj1;
+	obj1.view(10);
+	obj1.display();
+	
+	Student obj2(obj1); 
+	obj2.display();
+	return 0;
+}
