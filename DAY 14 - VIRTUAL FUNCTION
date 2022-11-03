@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+
+class parent {
+public:
+	virtual void print()
+	{
+		cout << "print parent class\n";
+	}
+
+	void show()
+	{
+		cout << "show parent class\n";
+	}
+};
+
+class child: public parent {
+public:
+	void print()
+	{
+		cout << "print child class\n";
+	}
+
+	void show()
+	{
+		cout << "show child class\n";
+	}
+};
+
+int main()
+{
+	parent *bptr;
+	child d;
+	bptr = &d;
+	bptr->print();
+	bptr->show();
+	
+	return 0;
+}
