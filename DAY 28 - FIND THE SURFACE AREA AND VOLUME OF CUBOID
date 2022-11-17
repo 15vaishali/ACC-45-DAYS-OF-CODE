@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	float cbd_Length, cbd_Width, cbd_Height, cbd_sa, cbd_Volume, cbd_LSA;
+	
+	cout << "\nPlease Enter the Length of a Cuboid = ";
+	cin >> cbd_Length;
+	
+	cout << "\nPlease Enter the Width of a Cuboid = ";
+	cin >> cbd_Width;
+	
+	cout << "\nPlease Enter the Height of a Cuboid = ";
+	cin >> cbd_Height;
+	
+	cbd_sa     = 2 * (cbd_Length * cbd_Width + cbd_Length * cbd_Height + cbd_Width * cbd_Height);
+	cbd_Volume = cbd_Length * cbd_Width * cbd_Height;
+	cbd_LSA    = 2 * cbd_Height * (cbd_Length + cbd_Width);
+	
+	cout << "\nThe Surface Area of a Cuboid          =  " << cbd_sa;
+	cout << "\nThe Volume of a Cuboid                =  " << cbd_Volume;
+	cout << "\nThe Lateral Surface Area of a Cuboid  =  " << cbd_LSA;
+		
+ 	return 0;
+}
