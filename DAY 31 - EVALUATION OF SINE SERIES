@@ -1,0 +1,30 @@
+#include<iostream>
+#include<math.h>
+using namespace std;
+long double factorial(int n)
+{
+    long double fact=1;
+    while(n>0)
+    {
+        fact*=n;
+        n--;
+    }
+    return fact;
+}
+int main()
+{
+    float temp=0,x,n,y=1,z;
+    cout<<"Enter the value of x ";
+    cin>>x;
+    cout<<"Enter the value of n ";
+    cin>>n;
+    z=x;
+    x=x*22/(180*7);
+    for(int i=1;i<=n;i+=2)
+    {
+         temp+=y*pow(x,i)/(1.0*factorial(i));
+         y=-y;
+    }
+    cout<<"sine("<<z<<") = "<<temp;
+    return 0;
+}
