@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+int no;
+cout << "Total_Students_In_One_Batch";
+cin >> no;
+float* pon_tr;
+pon_tr = new float[no];
+cout << "Marks_Of_Students" << endl;
+for (int k = 0; k < no; ++k)
+{
+cout << "Student_mrk" << k + 1 << ": ";
+cin >> *(pon_tr + k);
+}
+cout << "\nDisplay the Total marks of Students" << endl;
+for (int k = 0; k < no; ++k) {
+cout << "Student_mrk" << k + 1 << " :" << *(pon_tr + k) << endl;
+}
+delete [] pon_tr;
+return 0;
+}
