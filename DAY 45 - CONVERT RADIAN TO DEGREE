@@ -1,0 +1,27 @@
+
+#include <iostream>
+
+using namespace std;
+
+double Convert(double radian)
+{
+
+    double pi = 3.14159;
+
+    return(radian * (180 / pi));
+}
+ 
+
+int main() 
+{
+
+    double radian = 5.0;
+
+    double degree = Convert(radian);
+
+     
+
+    cout << degree;
+
+    return 0;
+}
